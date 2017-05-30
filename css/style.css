@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    /*  outline: dotted 1px red !important;*/
+}
+body {
+    font-family: 'Lora', serif;
+    color: #666666;
+}
+ul.tab {
+    width: 40%;
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: 2px;
+    background-color: white;
+}
+
+ul.tab li {float: left;}
+
+ul.tab li a {
+    display: flex;
+    color: #666666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+    border-bottom: 1px solid #ccc;
+}
+
+
+ul.tab li a:hover {background-color: #ddd;}
+
+
+ul.tab li a:focus, ul.tab li a.active {
+border-style: solid solid none ;
+border-width: 1px;
+border-color: #ccc;
+}
+
+img {
+    width: 50%;
+    border-radius: 50%;
+}
+.title {
+    margin-top: 5%;
+    text-align: center;
+    color: #797596;
+    font-size: 5em;
+    transition: font-size, margin 1s;
+}
+.container {
+    margin: auto;
+    width: 40%;
+}
+a:link {
+    text-decoration: none;
+    color: #666666;
+}
+a:visited {
+    text-decoration: none;
+    color: #666666;
+}
+a:hover {
+    text-decoration: underline;
+}
+.row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-left: 6px solid #797596;
+    background-color: #e5fee6;
+    padding-left: 1em;
+    margin-bottom: 1em;
+}
+.col-1 {
+    width: 10%;
+    order: 1;
+}
+.col-2 {
+    width: 20%;
+    order: 2;
+}
+.col-3 {
+    width: 15%;
+    order: 3;
+}
+.col-4 {
+    width: 55%;
+    order: 4;
+}
+@media screen and (max-width: 1024px) {
+    /* For medium screens: */
+
+    .container {
+            margin: auto;
+            width: 80%;
+        }
+
+}
+
+@media screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .col-1 {
+        display: none;
+    }
+    .col-2 {
+        width: 50%;
+    }
+    .col-3 {
+        width: 50%;
+        }
+    .col-4 {
+        display: none;
+        }
+    .container {
+            margin: auto;
+            width: 100%;
+        }
+    ul.tab li a {
+      border: none;
+    }
+    ul.tab li a:focus, ul.tab li a.active {
+      border: none;
+      text-decoration: underline;
+    }
+
+}
